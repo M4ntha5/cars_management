@@ -12,6 +12,8 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class, 50)->create();
+        ini_set('memory_limit', '512M');
+        DB::disableQueryLog();
+        factory(User::class, 2)->create();
     }
 }

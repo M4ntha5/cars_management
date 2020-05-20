@@ -16,4 +16,5 @@ class Statuses extends Model
     ];  
 
     protected $table = 'statuses';
+
 }

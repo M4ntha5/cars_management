@@ -12,6 +12,8 @@ class CarStatusSeeder extends Seeder
      */
     public function run()
     {
-        factory(CarStatus::class, 50)->create();
+        ini_set('memory_limit', '512M');
+        DB::disableQueryLog();
+        factory(CarStatus::class, 2)->create();
     }
 }

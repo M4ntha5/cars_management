@@ -16,4 +16,5 @@ class Segment extends Model
     ];   
 
     protected $table = 'segments';
+
 }

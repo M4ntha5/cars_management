@@ -12,17 +12,9 @@ class CarStatus extends Model
      * @var array
      */
     protected $fillable = [
-        'cars_id', 'status_id', 'date_from', 'date_to'
+        'car_id', 'status_id', 'date_from', 'date_to'
     ];  
     
     protected $table = 'car_status';
 
-    public function statuses()
-    {
-        return $this->hasMany('statuses');
-    }
-    public function cars()
-    {
-        return $this->hasMany('car');
-    }
 }

@@ -15,13 +15,13 @@ class CreateCarStatusTable extends Migration
     {
         Schema::create('car_status', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('cars_id')->unsigned();
+            $table->integer('car_id')->unsigned();
             $table->integer('status_id')->unsigned();
             $table->date('date_from');
             $table->date('date_to');
             $table->timestamps();
 
-            $table->foreign('cars_id')->references('id')->on('cars');
+            $table->foreign('car_id')->references('id')->on('cars');
             $table->foreign('status_id')->references('id')->on('statuses');
         });
     }
@@ -34,7 +34,7 @@ class CreateCarStatusTable extends Migration
     public function down()
     {
         Schema::dropIfExists('car_status');
-        $table->dropForeign('car_status_cars_id_foreign');
+        $table->dropForeign('car_status_car_id_foreign');
         $table->dropForeign('car_status_status_id_foreign');
     }
 }

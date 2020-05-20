@@ -12,6 +12,8 @@ class StatusesSeeder extends Seeder
      */
     public function run()
     {
-        factory(Statuses::class, 50)->create();
+        ini_set('memory_limit', '512M');
+        DB::disableQueryLog();
+        factory(Statuses::class, 2)->create();
     }
 }

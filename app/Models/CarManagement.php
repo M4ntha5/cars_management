@@ -12,8 +12,9 @@ class CarManagement extends Model
      * @var array
      */
     protected $fillable = [
-        'date_from', 'date_to', 'cars_id', 'segments_id', 'user_id'
+        'date_from', 'date_to', 'car_id', 'segment_id', 'user_id'
     ];
 
     protected $table = 'car_management';
+
 }
