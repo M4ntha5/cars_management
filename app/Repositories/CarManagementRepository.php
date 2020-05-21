@@ -19,7 +19,6 @@ class CarManagementRepository
      }   
 
      public function JoinUsers($joined){
-          $join = CarManagement::select('car_id', DB::raw('max(id) id'))->groupBy('car_id');
 
           $raw = DB::raw('select p1.date_to, p1.car_id, p1.id FROM car_management p1
                left outer join car_management p2 
