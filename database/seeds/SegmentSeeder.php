@@ -14,6 +14,6 @@ class SegmentSeeder extends Seeder
     {
         ini_set('memory_limit', '512M');
         DB::disableQueryLog();
-        factory(Segment::class, 2)->create();
+        factory(Segment::class, 1000)->create();
     }
 }

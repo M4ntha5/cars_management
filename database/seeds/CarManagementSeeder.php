@@ -14,6 +14,6 @@ class CarManagementSeeder extends Seeder
     {
         ini_set('memory_limit', '512M');
         DB::disableQueryLog();
-        factory(CarManagement::class, 2)->create();
+        factory(CarManagement::class, 1000)->create();
     }
 }

@@ -7,9 +7,9 @@ use Faker\Generator as Faker;
 
 $factory->define(CarManagement::class, function (Faker $faker) {
     return [
-        'car_id' => $faker->numberBetween(1,2),
-        'segment_id' => $faker->numberBetween(1,2),
-        'user_id' => $faker->numberBetween(1,2),
+        'car_id' => $faker->numberBetween(1,1000),
+        'segment_id' => $faker->numberBetween(1,1000),
+        'user_id' => $faker->numberBetween(1,1000),
         'date_from' => $faker->date(),
         'date_to' => $faker->date(),
     ];

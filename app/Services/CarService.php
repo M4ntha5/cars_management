@@ -19,9 +19,19 @@ class CarService
 
           $joinedManagemet = $carManagementRepo->JoinCarManagement($joinedCars);
 
-          $final = $carManagementRepo->JoinUsers($joinedCars);
+          $cars = $carManagementRepo->JoinUsers($joinedCars);
 
-          return $final;
+          $pastUsers = $carManagementRepo->JoinPastUsers();
+
+          for($i=0;$i<count($cars);$i++)
+               for($j=0;$j<count($pastUsers);$j++)
+                    if($cars[$i]->id == $pastUsers[$j]->car_id){
+                         $cars[$i]['pastUserName'] = $pastUsers[$j]->pastUserName;
+                         $cars[$i]['pastUserSegment'] = $pastUsers[$j]->pastUserSegment;
+                    }
+
+
+          return $cars;
      }
 
 }

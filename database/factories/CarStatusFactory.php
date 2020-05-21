@@ -9,7 +9,7 @@ $factory->define(CarStatus::class, function (Faker $faker) {
     return [
         'date_from' => $faker->date(),
         'date_to' => $faker->date(),
-        'car_id' => $faker->numberBetween(1,2),
-        'status_id' => $faker->numberBetween(1,2),
+        'car_id' => $faker->numberBetween(1,1000),
+        'status_id' => $faker->numberBetween(1,1000),
     ];
 });

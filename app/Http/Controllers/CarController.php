@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
 use App\Services\CarService;
+use App\Repositories\CarManagementRepository;
 
 class CarController extends Controller
 {
